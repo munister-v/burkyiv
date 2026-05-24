@@ -1,0 +1,15 @@
+<section id="results" class="section-results">
+  <div class="container">
+    <h2 class="section-title">НАШІ РЕЗУЛЬТАТИ</h2>
+
+    <div class="results-grid">
+      @for (result of results; track result.title; let i = $index) {
+        <div class="result-card">
+          <div class="result-number">0{{ i + 1 }}</div>
+          <h3 class="result-title">{{ result.title }}</h3>
+          <p class="result-description">{{ result.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

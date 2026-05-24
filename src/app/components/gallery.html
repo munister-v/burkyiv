@@ -1,0 +1,21 @@
+<section id="gallery" class="section-gallery">
+  <div class="container">
+    <h2 class="section-title">ФОТО ГАЛЕРЕЯ</h2>
+
+    <div class="gallery-grid">
+      @for (item of items; track item.label) {
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span class="gallery-label">{{ item.label }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="gallery-note">
+      <p>Більше фото та відео на нашому
+        <a href="https://www.instagram.com/burkyiv/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
+    </div>
+  </div>
+</section>

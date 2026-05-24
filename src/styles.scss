@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'NAMU';
+  src: url('https://www.bur.org.ua/wp-content/themes/bur-kost/assets/fonts/NAMU/NAMU.woff') format('woff'),
+       url('https://www.bur.org.ua/wp-content/themes/bur-kost/assets/fonts/NAMU/NAMU.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark: #333;
+  --color-light: #ecf3da;
+  --color-green: #95c0ac;
+  --color-yellow: #fcb814;
+  --color-orange: #ff4900;
+  --color-bg: #fff;
+  --color-bg-alt: #ecf3da;
+  --color-text: #333;
+  --color-text-light: #ecf3da;
+  --color-border: #ecf3da;
+  --font: 'NAMU', sans-serif;
+  --transition: 0.3s ease;
+  --max-width: 1920px;
+  --padding: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.015em;
+  font-family: var(--font);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: var(--max-width);
+  padding: 0 var(--padding);
+  width: 100%;
+}
+
+.section-title {
+  font-size: 60px;
+  line-height: 72px;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.button {
+  height: 56px;
+  font-size: 20px;
+  font-family: var(--font);
+  border-radius: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 0 32px;
+
+  span {
+    transform: translateY(-0.09em);
+  }
+
+  &.fillWhite {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-light);
+      color: var(--color-light);
+    }
+  }
+
+  &.borderWhite {
+    color: var(--color-light);
+    border-color: var(--color-light);
+
+    &:hover {
+      background-color: var(--color-light);
+      color: var(--color-dark);
+    }
+  }
+
+  &.fullYellow {
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow);
+    color: var(--color-dark);
+
+    &:hover {
+      background-color: #d49a00;
+    }
+  }
+
+  &.fullGreen {
+    background-color: var(--color-green);
+    color: #fff;
+
+    &:hover {
+      background-color: #7aab94;
+    }
+  }
+
+  &.fullOrange {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: #fff;
+
+    &:hover {
+      background-color: #cc3a00;
+    }
+  }
+
+  &.borderDark {
+    border-color: var(--color-dark);
+    color: var(--color-dark);
+
+    &:hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+  }
+}
+
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding: 24px;
+  }
+
+  body {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

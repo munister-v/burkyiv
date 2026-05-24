@@ -1,0 +1,162 @@
+:host {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+header {
+  transition: all 0.3s ease;
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(51, 51, 51, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.logo {
+  cursor: pointer;
+  display: block;
+  padding-top: 24px;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  padding-bottom: 19px;
+  border-bottom: 1px solid var(--color-light);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-bot {
+  padding-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  li a {
+    font-size: 24px;
+    color: var(--color-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 28px;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 24px;
+
+  span {
+    width: 32px;
+    height: 2px;
+    background: var(--color-light);
+    transition: all 0.3s ease;
+  }
+
+  &.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: var(--color-dark);
+  flex-direction: column;
+  padding: 80px 32px 32px;
+  gap: 24px;
+  transition: right 0.3s ease;
+  z-index: 50;
+
+  a {
+    font-size: 24px;
+    color: var(--color-light);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+  &.active {
+    right: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .header-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 80px;
+  }
+}

@@ -1,0 +1,26 @@
+<section class="section-values">
+  <div class="container">
+    <div class="values-header">
+      <h2 class="section-title">БУДУЄМО УКРАЇНУ РАЗОМ</h2>
+      <div class="values-desc">
+        Волонтерство від БУР — це можливість бути задіяним і цим
+        зміцнювати свою країну у складний для неї час
+      </div>
+      <a class="button fullGreen" (click)="scrollTo('contact')"><span>Зареєструватися</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-cards">
+  <div class="container">
+    <div class="cards-grid">
+      @for (value of values; track value.highlight) {
+        <div class="value-card">
+          <h3 class="card-title">{{ value.title }}</h3>
+          <span class="card-highlight">{{ value.highlight }}</span>
+          <p class="card-text">{{ value.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
