@@ -1,19 +1,11 @@
-<section id="results" class="section results">
+<section id="results" class="section-results">
   <div class="container">
-    <div class="results-header">
-      <h2 class="section-title">Наші <span class="accent">результати</span></h2>
-      <p class="section-subtitle">Що вдалося досягти завдяки спільній роботі волонтерів</p>
-    </div>
+    <h2 class="section-title">НАШІ РЕЗУЛЬТАТИ</h2>
 
     <div class="results-grid">
       @for (result of results; track result.title; let i = $index) {
         <div class="result-card">
           <div class="result-number">0{{ i + 1 }}</div>
-          <div class="result-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path [attr.d]="result.icon"/>
-            </svg>
-          </div>
           <h3 class="result-title">{{ result.title }}</h3>
           <p class="result-description">{{ result.description }}</p>
         </div>

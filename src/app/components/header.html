@@ -1,24 +1,41 @@
 <header [ngClass]="{ scrolled: isScrolled(), 'menu-open': menuOpen() }">
-  <div class="container header-inner">
+  <div class="container header-content">
     <a class="logo" (click)="scrollTo('hero')">
-      <span class="logo-text">BUR</span>
-      <span class="logo-accent">KYIV</span>
+      <img src="https://www.bur.org.ua/wp-content/uploads/2025/02/Asset-2.png" alt="BUR Kyiv" class="logo-img">
     </a>
 
-    <nav class="nav" [ngClass]="{ active: menuOpen() }">
-      <a class="nav-link" (click)="scrollTo('about')">Про нас</a>
-      <a class="nav-link" (click)="scrollTo('projects')">Проєкти</a>
-      <a class="nav-link" (click)="scrollTo('results')">Результати</a>
-      <a class="nav-link" (click)="scrollTo('team')">Команда</a>
-      <a class="nav-link" (click)="scrollTo('gallery')">Галерея</a>
-      <a class="nav-link" (click)="scrollTo('contact')">Контакти</a>
-      <a class="btn btn-primary nav-cta" (click)="scrollTo('contact')">Долучитися</a>
-    </nav>
+    <div class="header-right">
+      <div class="header-top">
+        <ul class="header-nav">
+          <li><a (click)="scrollTo('about')">Про нас</a></li>
+          <li><a (click)="scrollTo('projects')">Проєкти</a></li>
+          <li><a (click)="scrollTo('results')">Результати</a></li>
+          <li><a (click)="scrollTo('team')">Команда</a></li>
+          <li><a (click)="scrollTo('gallery')">Галерея</a></li>
+        </ul>
+      </div>
+      <div class="header-bot">
+        <ul class="header-nav">
+          <li><a (click)="scrollTo('contact')">Контакти</a></li>
+          <li><a href="https://www.bur.org.ua" target="_blank">BUR Україна</a></li>
+        </ul>
+      </div>
+    </div>
 
-    <button class="burger" [ngClass]="{ active: menuOpen() }" (click)="toggleMenu()">
+    <button class="hamburger" [ngClass]="{ active: menuOpen() }" (click)="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </button>
+
+    <nav class="mobile-nav" [ngClass]="{ active: menuOpen() }">
+      <a (click)="scrollTo('about')">Про нас</a>
+      <a (click)="scrollTo('projects')">Проєкти</a>
+      <a (click)="scrollTo('results')">Результати</a>
+      <a (click)="scrollTo('team')">Команда</a>
+      <a (click)="scrollTo('gallery')">Галерея</a>
+      <a (click)="scrollTo('contact')">Контакти</a>
+      <a href="https://www.bur.org.ua" target="_blank">BUR Україна</a>
+    </nav>
   </div>
 </header>

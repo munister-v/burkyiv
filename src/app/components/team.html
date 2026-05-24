@@ -1,9 +1,6 @@
-<section id="team" class="section team">
+<section id="team" class="section-team">
   <div class="container">
-    <div class="team-header">
-      <h2 class="section-title">Наша <span class="accent">команда</span></h2>
-      <p class="section-subtitle">Люди, які роблять BUR Kyiv можливим</p>
-    </div>
+    <h2 class="section-title">НАША КОМАНДА</h2>
 
     <div class="team-grid">
       @for (member of members; track member.name) {
@@ -11,8 +8,10 @@
           <div class="member-avatar">
             <span class="avatar-initials">{{ member.initials }}</span>
           </div>
-          <h3 class="member-name">{{ member.name }}</h3>
-          <p class="member-role">{{ member.role }}</p>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <p class="member-role">{{ member.role }}</p>
+          </div>
         </div>
       }
     </div>

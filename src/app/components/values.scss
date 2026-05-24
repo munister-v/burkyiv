@@ -1,92 +1,83 @@
-.values {
-  background: var(--color-bg-dark);
-}
+.section-values {
+  background: var(--color-green);
+  padding: 120px 0;
+  color: var(--color-light);
 
-.values-header {
-  text-align: center;
-  margin-bottom: 64px;
-
-  .section-subtitle {
-    margin-left: auto;
-    margin-right: auto;
+  @media (max-width: 768px) {
+    padding: 60px 0;
   }
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+.values-header {
+  max-width: 800px;
+
+  .section-title {
+    color: var(--color-light);
+    margin-bottom: 32px;
+  }
+}
+
+.values-desc {
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  color: var(--color-light);
+}
+
+.section-cards {
+  padding: 120px 0;
+  background: var(--color-bg);
 
   @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: 960px) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
 .value-card {
-  background: var(--color-bg-card);
-  border-radius: 20px;
-  padding: 40px 32px;
+  padding: 48px 40px;
   border: 1px solid var(--color-border);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-accent), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+  border-radius: 20px;
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-8px);
-    border-color: rgba(226, 183, 20, 0.2);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-
-    &::before {
-      opacity: 1;
-    }
+    border-color: var(--color-green);
+    box-shadow: 0 8px 40px rgba(149, 192, 172, 0.15);
   }
 }
 
-.value-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: rgba(226, 183, 20, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.card-highlight {
+  display: block;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--color-green);
   margin-bottom: 24px;
 
-  svg {
-    width: 28px;
-    height: 28px;
-    color: var(--color-accent);
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
   }
 }
 
-.value-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-
-.value-highlight {
-  display: block;
-  color: var(--color-accent);
-  font-size: 1.5rem;
-}
-
-.value-description {
-  color: var(--color-text-muted);
-  line-height: 1.8;
-  font-size: 0.95rem;
+.card-text {
+  line-height: 34px;
+  color: var(--color-text);
 }

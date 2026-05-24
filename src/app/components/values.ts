@@ -13,6 +13,10 @@ interface ValueItem {
   styleUrl: './values.scss',
 })
 export class Values {
+  protected scrollTo(id: string): void {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   protected readonly values: ValueItem[] = [
     {
       title: 'БУДУЄМО',

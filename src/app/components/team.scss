@@ -1,14 +1,13 @@
-.team {
-  background: var(--color-bg-section);
-}
+.section-team {
+  padding: 120px 0;
+  background: var(--color-bg);
 
-.team-header {
-  text-align: center;
-  margin-bottom: 64px;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
 
-  .section-subtitle {
-    margin-left: auto;
-    margin-right: auto;
+  .section-title {
+    margin-bottom: 64px;
   }
 }
 
@@ -28,52 +27,41 @@
 
 .team-card {
   text-align: center;
-  background: var(--color-bg-card);
-  border-radius: 20px;
   padding: 40px 24px;
   border: 1px solid var(--color-border);
-  transition: all 0.4s ease;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-6px);
-    border-color: rgba(226, 183, 20, 0.15);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
-
-    .member-avatar {
-      background: rgba(226, 183, 20, 0.15);
-      border-color: var(--color-accent);
-    }
+    border-color: var(--color-green);
+    box-shadow: 0 8px 40px rgba(149, 192, 172, 0.15);
   }
 }
 
 .member-avatar {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: rgba(226, 183, 20, 0.08);
-  border: 2px solid var(--color-border);
+  background: var(--color-bg-alt);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  transition: all 0.3s ease;
+  margin: 0 auto 24px;
 }
 
 .avatar-initials {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-accent);
+  font-size: 36px;
+  color: var(--color-green);
 }
 
 .member-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 8px;
+  color: var(--color-text);
 }
 
 .member-role {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-green);
 }

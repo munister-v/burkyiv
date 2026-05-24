@@ -1,15 +1,19 @@
-<section class="stats">
+<section class="section-stats">
   <div class="container">
-    <div class="stats-header">
-      <h2 class="section-title">BUR Kyiv <span class="accent">у цифрах</span></h2>
-    </div>
-    <div class="stats-grid">
-      @for (stat of stats; track stat.label) {
-        <div class="stat-item">
-          <span class="stat-number">{{ stat.number }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
-      }
+    <h2 class="section-title">BUR KYIV У ЦИФРАХ</h2>
+    <div class="stats-content">
+      <div class="stats-main">
+        <span class="stats-big-number">500+</span>
+        <span class="stats-big-label">ВОЛОНТЕРІВ</span>
+      </div>
+      <ul class="stats-list">
+        @for (stat of stats; track stat.label) {
+          <li class="stat-item">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </li>
+        }
+      </ul>
     </div>
   </div>
 </section>

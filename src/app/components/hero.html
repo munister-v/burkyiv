@@ -1,35 +1,19 @@
 <section id="hero" class="hero">
-  <div class="hero-bg">
-    <div class="hero-overlay"></div>
-    <div class="hero-particles">
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-      <div class="particle"></div>
-    </div>
+  <div class="hero-image">
+    <img src="https://www.bur.org.ua/wp-content/uploads/2022/10/photo-camp-cover.jpg" alt="BUR Kyiv волонтери">
   </div>
-
-  <div class="container hero-content">
-    <div class="hero-badge">Київський регіональний осередок</div>
-    <h1 class="hero-title">
-      <span class="hero-title-line">БУДУЄМО</span>
-      <span class="hero-title-line accent">УКРАЇНУ</span>
-      <span class="hero-title-line">РАЗОМ</span>
-    </h1>
-    <p class="hero-description">
-      Волонтерський рух BUR Kyiv об'єднує активну молодь столиці для відбудови
-      громад, розвитку волонтерства та зміцнення довіри між українцями.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" (click)="scrollTo('contact')">Стати волонтером</a>
-      <a class="btn btn-outline" (click)="scrollTo('about')">Дізнатись більше</a>
-    </div>
-  </div>
-
-  <div class="hero-scroll" (click)="scrollTo('about')">
-    <div class="scroll-indicator">
-      <div class="scroll-dot"></div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <h1 class="hero-title">BUR KYIV</h1>
+      <p class="hero-text">
+        Київський регіональний осередок "Будуємо Україну Разом".
+        Волонтерський рух, що об'єднує активну молодь столиці для
+        відбудови громад та розвитку волонтерства.
+      </p>
+      <div class="hero-buttons">
+        <a class="button fillWhite" (click)="scrollTo('contact')"><span>Долучитися</span></a>
+        <a class="button borderWhite" (click)="scrollTo('about')"><span>Дізнатись більше</span></a>
+      </div>
     </div>
   </div>
 </section>
