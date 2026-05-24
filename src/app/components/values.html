@@ -1,0 +1,25 @@
+<section class="section values">
+  <div class="container">
+    <div class="values-header">
+      <h2 class="section-title">Наші <span class="accent">цінності</span></h2>
+      <p class="section-subtitle">Три стовпи, на яких тримається наш рух</p>
+    </div>
+
+    <div class="values-grid">
+      @for (value of values; track value.highlight) {
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path [attr.d]="value.icon"/>
+            </svg>
+          </div>
+          <h3 class="value-title">
+            {{ value.title }}
+            <span class="value-highlight">{{ value.highlight }}</span>
+          </h3>
+          <p class="value-description">{{ value.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<header [ngClass]="{ scrolled: isScrolled(), 'menu-open': menuOpen() }">
+  <div class="container header-inner">
+    <a class="logo" (click)="scrollTo('hero')">
+      <span class="logo-text">BUR</span>
+      <span class="logo-accent">KYIV</span>
+    </a>
+
+    <nav class="nav" [ngClass]="{ active: menuOpen() }">
+      <a class="nav-link" (click)="scrollTo('about')">Про нас</a>
+      <a class="nav-link" (click)="scrollTo('projects')">Проєкти</a>
+      <a class="nav-link" (click)="scrollTo('results')">Результати</a>
+      <a class="nav-link" (click)="scrollTo('team')">Команда</a>
+      <a class="nav-link" (click)="scrollTo('gallery')">Галерея</a>
+      <a class="nav-link" (click)="scrollTo('contact')">Контакти</a>
+      <a class="btn btn-primary nav-cta" (click)="scrollTo('contact')">Долучитися</a>
+    </nav>
+
+    <button class="burger" [ngClass]="{ active: menuOpen() }" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
