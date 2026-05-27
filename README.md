@@ -1,5 +1,8 @@
 # Burkyiv
 
+Static BУР Kyiv wireframe source is stored in `public/wireframe/`.
+The public preview is published at `https://munister.com.ua/bur/`.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
 
 ## Development server
